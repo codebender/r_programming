@@ -30,7 +30,7 @@ rankhospital <- function(state, outcome, num = "best") {
     mortaility_sorted <- mortaility_sorted[!is.na(mortaility_sorted$Hospital.30.Day.Death..Mortality..Rates.from.Heart.Failure),]
   }
   else {
-    filtered$Hospital.30.Day.Death..Mortality..Rates.from.Heart.Failure <- as.numeric(filtered$Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia)
+    filtered$Hospital.30.Day.Death..Mortality..Rates.from.Heart.Pneumonia <- as.numeric(filtered$Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia)
     mortaility_sorted <- filtered[with(filtered, order(Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia, Hospital.Name)),]
     mortaility_sorted <- mortaility_sorted[!is.na(mortaility_sorted$Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia),]
   }
